@@ -3,4 +3,7 @@ image:
 ports:
     - port: 6080
 tasks:
-    - init: |
+    - init: >
+        sudo apt update &&
+        sudo apt install -y unar curl &&
+        curl -fsSL https://crystal-lang.org/install.sh | sudo bash
